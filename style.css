@@ -1,0 +1,61 @@
+.json-editor-btn-add {
+    background-color: #62b56b;
+}
+
+.json-editor-btn-edit {
+    margin-bottom: 10px;
+}
+
+/* Changing the background of the inputfield */
+/* [data-schemapath='root.pools'] {
+    background: purple;
+} */
+
+/* .json-editor-btntype-delete {
+    background-color: red;
+} */
+
+.card-body {
+    padding: 0px;
+}
+
+.json-editor-btn-collapse {
+    height: 25px;
+}
+
+label {
+    font-size: medium;
+    font-weight: bold;
+    margin-right: 20px;
+}
+
+.card-title {
+    margin: 0px;
+    margin-bottom: 10px;
+}
+
+.form-check-label {
+    font-weight: normal;
+}
+
+.form-group {
+    margin-bottom: 0px;
+}
+
+.card {
+    padding: 5px;
+    padding-left: 10px;
+    margin: 0px;
+}
+
+input {
+    padding-left: 0px;
+}
+
+div#item.col-md-2 {
+    max-width: 120px;
+}
+
+textarea {
+    width: 500px;
+}
