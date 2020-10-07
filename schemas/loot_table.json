@@ -283,7 +283,7 @@
                         "hidden": true
                     }
                 },
-                "pages": {
+                "lore": {
                     "type": "array",
                     "title": "Lore Lines",
                     "items": {
