@@ -283,7 +283,7 @@
                         "hidden": true
                     }
                 },
-                "pages": {
+                "lore": {
                     "type": "array",
                     "title": "Lore Lines",
                     "items": {
@@ -769,11 +769,6 @@
                     "default": 1,
                     "type": "integer",
                     "description": "The higher the weight, the more likely this entry will be picked."
-                },
-                "quality": {
-                    "type": "integer",
-                    "title": "Item Quality",
-                    "description": "Quality will affect the weight based on the player's luck."
                 },
                 "functions": {
                     "title": "Functions",
