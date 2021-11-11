@@ -24,6 +24,11 @@
                         "description": "Returns true if the actor properties defined were executed."
                     },
                     {
+                        "$ref": "#/definitions/condition_match_tool",
+                        "title": "Match Tool",
+                        "description": "Returns true if the held tool matches the defined tool and enchantments."
+                    },
+                    {
                         "$ref": "#/definitions/condition_killed_by_player",
                         "title": "Killed by Player",
                         "description": "Returns the condition true if the actor of the loot table is killed by the player."
@@ -61,6 +66,25 @@
             }
         },
         "min_max": {
+            "allOf": [
+                {
+                    "title": "Min/Max",
+                    "properties": {
+                        "min": {
+                            "type": "integer",
+                            "title": "Min",
+                            "default": 1
+                        },
+                        "max": {
+                            "type": "integer",
+                            "title": "Max",
+                            "default": 1
+                        }
+                    }
+                }
+            ]
+        },
+        "min_max_int": {
             "anyOf": [
                 {
                     "title": "Integer",
@@ -173,7 +197,7 @@
                 "levels": {
                     "title": "Level to Enchant With",
                     "default": 1,
-                    "$ref": "#/definitions/min_max"
+                    "$ref": "#/definitions/min_max_int"
                 }
             }
         },
@@ -206,7 +230,7 @@
                 "count": {
                     "title": "Looting Enchant Amount",
                     "default": 1,
-                    "$ref": "#/definitions/min_max"
+                    "$ref": "#/definitions/min_max_int"
                 }
             }
         },
@@ -403,7 +427,7 @@
                 "count": {
                     "title": "Count",
                     "default": 1,
-                    "$ref": "#/definitions/min_max"
+                    "$ref": "#/definitions/min_max_int"
                 }
             }
         },
@@ -419,7 +443,7 @@
                 "data": {
                     "title": "Data Value",
                     "default": 1,
-                    "$ref": "#/definitions/min_max"
+                    "$ref": "#/definitions/min_max_int"
                 }
             }
         },
@@ -440,7 +464,7 @@
                 "values": {
                     "title": "Value",
                     "default": 1,
-                    "$ref": "#/definitions/min_max"
+                    "$ref": "#/definitions/min_max_int"
                 }
             }
         },
@@ -456,7 +480,7 @@
                 "values": {
                     "title": "Value",
                     "default": 1,
-                    "$ref": "#/definitions/min_max"
+                    "$ref": "#/definitions/min_max_int"
                 }
             }
         },
@@ -557,6 +581,76 @@
                         },
                         "on_fire": {
                             "type": "boolean"
+                        }
+                    }
+                }
+            }
+        },
+        "condition_match_tool": {
+            "properties": {
+                "condition": {
+                    "type": "string",
+                    "template": "match_tool",
+                    "options": {
+                        "hidden": true
+                    }
+                },
+                "item": {
+                    "type": "string"
+                },
+                "count": {
+                    "type": "integer",
+                    "default": 1
+                },
+                "enchantments": {
+                    "title": "Enchantments",
+                    "format": "table",
+                    "type": "array",
+                    "items": {
+                        "properties": {
+                            "enchantment": {
+                                "type": "string",
+                                "title": "Enchantment id",
+                                "enum": [
+                                    "aqua_affinity",
+                                    "bane_of_arthropods",
+                                    "blast_protection",
+                                    "channeling",
+                                    "depth_strider",
+                                    "efficiency",
+                                    "feather_falling",
+                                    "fire_aspect",
+                                    "fire_protection",
+                                    "flame",
+                                    "fortune",
+                                    "frost_walker",
+                                    "impaling",
+                                    "infinity",
+                                    "knockback",
+                                    "looting",
+                                    "loyalty",
+                                    "luck_of_the_sea",
+                                    "lure",
+                                    "mending",
+                                    "multishot",
+                                    "piercing",
+                                    "projectile_protection",
+                                    "protection",
+                                    "punch",
+                                    "quick_charge",
+                                    "respiration",
+                                    "riptide",
+                                    "sharpness",
+                                    "silk_touch",
+                                    "smite",
+                                    "thorns",
+                                    "unbreaking"
+                                ]
+                            },
+                            "level": {
+                                "default": 1,
+                                "$ref": "#/definitions/min_max"
+                            }
                         }
                     }
                 }
@@ -911,7 +1005,7 @@
                         "disable_collapse": true
                     },
                     "default": 1,
-                    "$ref": "#/definitions/min_max"
+                    "$ref": "#/definitions/min_max_int"
                 },
                 "bonus_rolls": {
                     "title": "Bonus Rolls",
@@ -921,7 +1015,7 @@
                         "disable_collapse": true
                     },
                     "default": 1,
-                    "$ref": "#/definitions/min_max"
+                    "$ref": "#/definitions/min_max_int"
                 },
                 "entries": {
                     "propertyOrder": 1,
