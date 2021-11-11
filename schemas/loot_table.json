@@ -91,19 +91,7 @@
                     "type": "integer"
                 },
                 {
-                    "title": "Min/Max",
-                    "properties": {
-                        "min": {
-                            "type": "integer",
-                            "title": "Min",
-                            "default": 1
-                        },
-                        "max": {
-                            "type": "integer",
-                            "title": "Max",
-                            "default": 1
-                        }
-                    }
+                    "$ref": "#/definitions/min_max"
                 }
             ]
         },
@@ -114,20 +102,46 @@
                     "type": "number"
                 },
                 {
-                    "title": "Min/Max",
-                    "properties": {
-                        "min": {
-                            "type": "number",
-                            "title": "Min",
-                            "default": 1
-                        },
-                        "max": {
-                            "type": "number",
-                            "title": "Max",
-                            "default": 1
-                        }
-                    }
+                    "$ref": "#/definitions/min_max"
                 }
+            ]
+        },
+        "enchantments": {
+            "title": "Enchantment id",
+            "enum": [
+                "aqua_affinity",
+                "bane_of_arthropods",
+                "blast_protection",
+                "channeling",
+                "depth_strider",
+                "efficiency",
+                "feather_falling",
+                "fire_aspect",
+                "fire_protection",
+                "flame",
+                "fortune",
+                "frost_walker",
+                "impaling",
+                "infinity",
+                "knockback",
+                "looting",
+                "loyalty",
+                "luck_of_the_sea",
+                "lure",
+                "mending",
+                "multishot",
+                "piercing",
+                "projectile_protection",
+                "protection",
+                "punch",
+                "quick_charge",
+                "respiration",
+                "riptide",
+                "sharpness",
+                "silk_touch",
+                "smite",
+                "thorns",
+                "unbreaking"
             ]
         },
         "entry_empty": {
@@ -369,42 +383,7 @@
                         "properties": {
                             "id": {
                                 "type": "string",
-                                "title": "Enchantment id",
-                                "enum": [
-                                    "aqua_affinity",
-                                    "bane_of_arthropods",
-                                    "blast_protection",
-                                    "channeling",
-                                    "depth_strider",
-                                    "efficiency",
-                                    "feather_falling",
-                                    "fire_aspect",
-                                    "fire_protection",
-                                    "flame",
-                                    "fortune",
-                                    "frost_walker",
-                                    "impaling",
-                                    "infinity",
-                                    "knockback",
-                                    "looting",
-                                    "loyalty",
-                                    "luck_of_the_sea",
-                                    "lure",
-                                    "mending",
-                                    "multishot",
-                                    "piercing",
-                                    "projectile_protection",
-                                    "protection",
-                                    "punch",
-                                    "quick_charge",
-                                    "respiration",
-                                    "riptide",
-                                    "sharpness",
-                                    "silk_touch",
-                                    "smite",
-                                    "thorns",
-                                    "unbreaking"
-                                ]
+                                "$ref": "#/definitions/enchantments"
                             },
                             "level": {
                                 "type": "integer",
@@ -610,42 +589,7 @@
                         "properties": {
                             "enchantment": {
                                 "type": "string",
-                                "title": "Enchantment id",
-                                "enum": [
-                                    "aqua_affinity",
-                                    "bane_of_arthropods",
-                                    "blast_protection",
-                                    "channeling",
-                                    "depth_strider",
-                                    "efficiency",
-                                    "feather_falling",
-                                    "fire_aspect",
-                                    "fire_protection",
-                                    "flame",
-                                    "fortune",
-                                    "frost_walker",
-                                    "impaling",
-                                    "infinity",
-                                    "knockback",
-                                    "looting",
-                                    "loyalty",
-                                    "luck_of_the_sea",
-                                    "lure",
-                                    "mending",
-                                    "multishot",
-                                    "piercing",
-                                    "projectile_protection",
-                                    "protection",
-                                    "punch",
-                                    "quick_charge",
-                                    "respiration",
-                                    "riptide",
-                                    "sharpness",
-                                    "silk_touch",
-                                    "smite",
-                                    "thorns",
-                                    "unbreaking"
-                                ]
+                                "$ref": "#/definitions/enchantments"
                             },
                             "level": {
                                 "default": 1,
