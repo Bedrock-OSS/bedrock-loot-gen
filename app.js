@@ -2,17 +2,17 @@ var express = require('express');
 var app = express();
 
 app.get('/',function(req,res) {
-    res.sendFile(__dirname + '/index.html');
+    res.sendFile(__dirname + '/public/index.html');
 });
 
 
 app.get('/loot_table.json',function(req,res) {
-  res.sendFile(__dirname + '/schemas/loot_table.json');
+  res.sendFile(__dirname + '/public/schemas/loot_table.json');
 });
 
 app.listen(80, function () {
 });
 
-app.get('/style.css',function(req,res) {
-  res.sendFile(__dirname + '/style.css');
+app.get('/styles.css',function(req,res) {
+  res.sendFile(__dirname + '/public/styles.css');
 });
