@@ -7,7 +7,7 @@ app.get('/',function(req,res) {
 
 
 app.get('/loot_table.json',function(req,res) {
-  res.sendFile(__dirname + '/public/schemas/loot_table.json');
+  res.sendFile(__dirname + '/public/loot_table.json');
 });
 
 app.listen(80, function () {
