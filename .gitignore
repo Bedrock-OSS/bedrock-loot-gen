@@ -1,6 +1,7 @@
 # Personal
 .vscode
-
+venv 
+__pycache__
 
 # OS X
 .DS_Store*
