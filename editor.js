@@ -15,7 +15,7 @@ function main() {
   var loot_table_schema = {};
 
   loadJSON(function (response) {
-    // loot_table_schema = response
+    console.log(response);
     loot_table_schema = JSON.parse(response);
   });
   
