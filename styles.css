@@ -2,6 +2,10 @@
     background-color: #62b56b;
 }
 
+html {
+    background-color: #f5f5f5;
+}
+
 .json-editor-btn-edit {
     margin-bottom: 10px;
 }
