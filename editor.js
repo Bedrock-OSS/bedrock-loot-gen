@@ -11,11 +11,9 @@ function loadJSON(callback) {
 }
 
 function main() {
-  console.log("HELLO WORLD!");
   var loot_table_schema = {};
 
   loadJSON(function (response) {
-    console.log(response);
     loot_table_schema = JSON.parse(response);
   });
   
@@ -31,25 +29,22 @@ function main() {
     disable_array_reorder: true,
     disable_collapse: true,
     disable_properties: true,
+    remove_button_labels: true,
     disable_edit_json: true,
     no_additional_properties: true,
     schema: loot_table_schema,
   });
 
   editor.on("ready", function () {
-    var button = editor.root.getButton(
-        "Save Result As File",
-        "save",
-        "Save Result As File"
-      ),
-      button_holder = editor.root.theme.getHeaderButtonHolder();
-    button_holder.appendChild(button);
-    editor.root.header.parentNode.insertBefore(
-      button_holder,
-      editor.root.header.nextSibling
-    );
 
-    button.addEventListener(
+
+    var buttonRow = document.getElementsByClassName("je-object__controls")[0];
+    var insert = document.createElement('div');
+    insert.innerHTML = '<button type="button" title="Save Result As File" class="custom-button btn btn-secondary btn-sm json-editor-btn-save"><i class="fas fa-save"></i><span> Save Result As File</span></button>';
+    
+    buttonRow.appendChild(insert);
+
+    insert.addEventListener(
       "click",
       function (e) {
         e.preventDefault();

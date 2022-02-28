@@ -147,7 +147,6 @@
         "entry_empty": {
             "type": "object",
             "description": "States that the entry will be nothing. No item will be provided. Does not support functions and the name string key cannot be used. While conditions may be used, they are essentially useless.",
-            "headerTemplate": "Empty: {{ i1 }}",
             "title": "Empty",
             "format": "normal",
             "options": {
@@ -170,7 +169,6 @@
         "entry_table": {
             "type": "object",
             "description": "States that the entry will be another loot table. This simplifies loot tables that uses the same data as another. The name string key is required and defines which loot table is to be used. Does not support functions. Note that the other loot table's provided item is not affected by this loot table. If the other loot table has 3 rolls while this one has 1, the other loot table will cycle through all 3 of its own rolls.A loot table may not point to itself in any manner. If the root loot table points to a second loot table that selects the root in a loop, the loot table will not function and no item will be provided.",
-            "headerTemplate": "Loot Table: {{ i1 }}",
             "format": "table",
             "options": {
                 "display_required_only": false,
@@ -779,7 +777,6 @@
         "entry_item": {
             "type": "object",
             "description": "States that the entry will be an actual item. The name string key is required and defines the item ID to be used. This particular type supports the use of functions.",
-            "headerTemplate": "Entry: {{ i1 }}",
             "format": "categories",
             "options": {
                 "display_required_only": false,
